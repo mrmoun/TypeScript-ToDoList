@@ -1,22 +1,16 @@
+import { Item } from "../interfaces/Item";
 
-//Item Interface
-export interface Item {
-
-    id : string, 
-    item: string,
-    checked: boolean 
-
-}
-
-
+// Item Implementation
 export default class ListItem implements Item {
-    
 
+    // put underscores to avoids conflicts with the interface
     constructor(
         private _id: string = '',
         private _item: string = '',
         private _checked: boolean= false
     ){}
+
+    // add getters and setters
 
     get id(): string{
         return this._id;
